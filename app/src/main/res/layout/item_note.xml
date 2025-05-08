@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="16dp"
+    android:layout_marginVertical="8dp"
+    app:cardBackgroundColor="#FFFFFF"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="4dp"
+    app:strokeColor="#E0E0E0"
+    app:strokeWidth="0dp"
+    android:clickable="true"
+    android:focusable="true"
+    android:foreground="?attr/selectableItemBackground">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <!-- Colored accent bar on the left side -->
+        <View
+            android:id="@+id/noteAccentBar"
+            android:layout_width="4dp"
+            android:layout_height="0dp"
+            android:background="#6200EE"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/noteContent"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:fontFamily="sans-serif"
+            android:lineSpacingExtra="6dp"
+            android:minHeight="60dp"
+            android:textColor="#333333"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/noteAccentBar"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- Media Attachments -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/noteMediaRecyclerView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/noteContent"
+            app:layout_constraintTop_toBottomOf="@id/noteContent"
+            tools:itemCount="3"
+            tools:listitem="@layout/item_media"
+            tools:visibility="visible" />
+
+        <!-- Media Count Badge -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/mediaCountBadge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:visibility="gone"
+            app:cardBackgroundColor="#6200EE"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="0dp"
+            app:layout_constraintStart_toStartOf="@id/noteContent"
+            app:layout_constraintTop_toBottomOf="@id/noteMediaRecyclerView"
+            tools:visibility="visible">
+
+            <TextView
+                android:id="@+id/mediaCountText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-medium"
+                android:paddingHorizontal="8dp"
+                android:paddingVertical="4dp"
+                android:textColor="@android:color/white"
+                android:textSize="12sp"
+                tools:text="3 attachments" />
+        </com.google.android.material.card.MaterialCardView>
+
+        <TextView
+            android:id="@+id/noteTimestamp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:fontFamily="sans-serif-light"
+            android:textColor="#757575"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="@id/noteContent"
+            app:layout_constraintTop_toBottomOf="@id/mediaCountBadge" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/editButtonContainer"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="8dp"
+            app:cardBackgroundColor="#F0F0F0"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="0dp"
+            app:layout_constraintBottom_toBottomOf="@id/noteTimestamp"
+            app:layout_constraintEnd_toStartOf="@id/deleteButtonContainer"
+            app:layout_constraintTop_toTopOf="@id/noteTimestamp">
+
+            <ImageButton
+                android:id="@+id/editNoteButton"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="Edit note"
+                android:padding="8dp"
+                android:src="@android:drawable/ic_menu_edit"
+                android:tint="#6200EE" />
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/deleteButtonContainer"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            app:cardBackgroundColor="#F0F0F0"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="0dp"
+            app:layout_constraintBottom_toBottomOf="@id/noteTimestamp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/noteTimestamp">
+
+            <ImageButton
+                android:id="@+id/deleteNoteButton"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="Delete note"
+                android:padding="8dp"
+                android:src="@android:drawable/ic_menu_delete"
+                android:tint="#FF5252" />
+        </com.google.android.material.card.MaterialCardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.card.MaterialCardView>
