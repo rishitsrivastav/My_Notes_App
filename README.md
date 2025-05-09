@@ -1,6 +1,7 @@
 # NotesApp - Modern Android Notes Application
 
-![NotesApp Banner](https://github.com/username/test/raw/main/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png)
+<img src="https://github.com/user-attachments/assets/498453bd-6c99-4818-a2e0-ef461ca67a97" width="200" height="200"/>
+
 
 A sleek, modern Android notes application with rich media support, built with Material Design principles and Room database.
 
@@ -14,16 +15,11 @@ A sleek, modern Android notes application with rich media support, built with Ma
 - **Dark Mode Support**: Automatically adapts to system dark mode settings
 - **Edge-to-Edge Design**: Immersive full-screen experience
 
-## Screenshots
+## Demo Video
 
-<table>
-  <tr>
-    <td><img src="screenshots/home_screen.png" alt="Home Screen" width="200"/></td>
-    <td><img src="screenshots/add_note.png" alt="Add Note" width="200"/></td>
-    <td><img src="screenshots/note_with_media.png" alt="Note with Media" width="200"/></td>
-    <td><img src="screenshots/search_notes.png" alt="Search Notes" width="200"/></td>
-  </tr>
-</table>
+https://github.com/user-attachments/assets/3127360d-d432-4c8d-9dd3-b16fcdf161d1
+
+
 
 ## Architecture
 
@@ -92,9 +88,3 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - Room persistence library
 - Glide image loading library
 - ExoPlayer video playback library
-
-## Contact
-
-Your Name - [@your_twitter](https://twitter.com/your_twitter) - email@example.com
-
-Project Link: [https://github.com/username/test](https://github.com/username/test)
