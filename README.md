@@ -2,6 +2,9 @@
 
 <img src="https://github.com/user-attachments/assets/498453bd-6c99-4818-a2e0-ef461ca67a97" width="200" height="200"/>
 
+## Download APK
+
+https://github.com/rishitsrivastav/My_Notes_App/releases
 
 A sleek, modern Android notes application with rich media support, built with Material Design principles and Room database.
 
